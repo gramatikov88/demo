@@ -1,0 +1,47 @@
+.app-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #aaa;
+    color: white;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 20px 40px;
+}
+
+.app-header ul li {
+    display: inline;
+    margin: 0 15px; /* 0px top/bottom, 15px left/right */
+}
+
+.app-header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.app-header ul li a:hover {
+    color: lightgray;
+    text-shadow: 1px 1px 2px black;
+}
+
+.user-greeting {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
