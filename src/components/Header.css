@@ -1,3 +1,7 @@
+:root {
+    --lg-hover-glow: rgba(255,255,255,0.4);
+}
+
 .app-header {
     position: fixed;
     width: 100%;
@@ -6,6 +10,12 @@
     background: #aaa;
     color: white;
     padding: 0;
+    z-index: 100;
+    /* Liquid glass effect */
+    backdrop-filter: blur(8px) brightness(1.1);
+    background: rgba(170, 170, 170, 0.7);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12), 0 0 20px rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 .header-content {
@@ -32,11 +42,23 @@ ul {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative;
+    padding: 8px 18px;
+    border-radius: 1.2rem;
+    transition: 
+        color 0.3s,
+        background 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        backdrop-filter 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
 .app-header ul li a:hover {
-    color: lightgray;
-    text-shadow: 1px 1px 2px black;
+    color: #fff;
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 0 10px 4px var(--lg-hover-glow, rgba(255,255,255,0.4));
+    backdrop-filter: blur(10px) brightness(1.2);
+    text-shadow: 0 0 8px #fff, 0 0 2px #444;
+    border: 1px solid rgba(255,255,255,0.25);
 }
 
 .user-greeting {
@@ -44,4 +66,9 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 1.2rem;
+    padding: 6px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    backdrop-filter: blur(4px);
 }
